@@ -1,0 +1,24 @@
+.bittersweet{
+    background-color: #FE6F5E;
+}
+nav .brand-logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    text-indent: 15px;
+    letter-spacing: 2px;
+    color: #fff6eb;
+}
+
+.sidenav .brand-logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #fff6eb;
+}
+.text-shadow{
+    text-shadow: 3px 3px 3px rgba(112, 12, 1, 0.5)
+}
+
+h4{
+    margin: 0;
+}
