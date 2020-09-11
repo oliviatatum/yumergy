@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meals</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
     {% for meal in meals %}
         {{ meal.meal_name }}<br>
         {{ meal.meal_time }}<br>
         {{ meal.meal_calories }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}
