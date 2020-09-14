@@ -25,6 +25,13 @@ def get_meals():
     return render_template("meals.html", meals=meals)
 
 
+@app.route("/")
+@app.route("/browse_all")
+def browse_all():
+    meals = mongo.db.Meals.find()
+    return render_template("browseall.html", meals=meals)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

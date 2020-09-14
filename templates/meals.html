@@ -1,10 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for meal in meals %}
-        {{ meal.meal_name }}<br>
-        {{ meal.meal_time }}<br>
-        {{ meal.meal_calories }}<br>
-    {% endfor %}
+
+<h1 class="big-text text-shadow center-align">Super Search</h1>
+  <div class="row">
+    <form class="col s8 offset-s2">
+      <div class="row">
+        <h5> What Do You Fancy? </h5>
+        <div class="input-field col s12">
+          <textarea id="mainsearch" class="materialize-textarea"></textarea>
+          <label for="mainsearch">e.g. lasagne, Chinese, party food, barbeque... </label>
+        </div>
+      </div>
+    <div class="row">
+    <form>
+       <h5>Please show me recipes that are: </h5><br>
+       <div class="input" id="preferences">
+        <p class="center-align">
+            <label for="preferences">
+                <input type="checkbox" class="filled-in" checked="no" />
+                    <span> Dairy-free </span>
+            </label>
+            <label for="preferences">
+                <input type="checkbox" class="filled-in" checked="" />
+                    <span> Nut-free </span>
+            </label>
+            <label for="preferences">
+                <input type="checkbox" class="filled-in" checked="" />
+                    <span> Gluten-free </span>
+            </label>
+            <label for="preferences">
+                <input type="checkbox" class="filled-in" checked="" />
+                    <span> Egg-free </span>
+            </label>
+            <label for="preferences">
+                <input type="checkbox" class="filled-in" checked="" />
+                    <span> Vegan </span>
+            </label>
+            <label for="preferences">
+                <input type="checkbox" class="filled-in" checked="" />
+                    <span> Vegetarian </span>
+            </label>
+            
+        </p>
+        </div>
+    </form>
+    <br>
+   <div class="row center-align">Need some inspiration? <a href="{{ url_for('browse_all') }}">Browse all recipes.</a></div>
+   </div>
+   
 
 {% endblock %}

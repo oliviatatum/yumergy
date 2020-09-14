@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    {% for meal in meals %}
+    
+        <div class="col card-panel m2">
+            <h5>{{ meal.meal_name }}</h5>
+            #{{ meal.meal_time }} 
+                {% if meal.dairy_free %}
+                    #dairy-free
+                {% endif %}
+                {% if meal.gluten_free %}
+                    #gluten-free
+                {% endif %}
+            <br>{{ meal.meal_calories }} calories<br>
+            <img class="meal_images center-align" src="{{ meal.meal_img}}" alt="{{ meal.meal_name }}" image-width="50px">
+        </div>
+   
+    {% endfor %}
+ </div>
+
+{% endblock %}
