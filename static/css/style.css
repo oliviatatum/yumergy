@@ -1,12 +1,20 @@
 .bittersweet{
     background-color: #FE6F5E;
 }
+
+.cadet-blue {
+    background-color: #A9B2C3;
+}
 nav .brand-logo{
     font-family: 'Pacifico', cursive;
     font-size: 32px;
     text-indent: 15px;
     letter-spacing: 2px;
     color: #fff6eb;
+}
+
+.flashes h5{
+    line-height: 2;
 }
 
 .sidenav .brand-logo{
@@ -27,6 +35,11 @@ h3{
 
 h4{
     margin: 0;
+}
+
+h5{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 .fa-user-plus, .fa-user-lock{
