@@ -42,6 +42,19 @@ h5{
     font-weight: 300;
 }
 
-.fa-user-plus, .fa-user-lock{
+.fa-user-plus, .fa-user-lock, .fa-user-cog{
     color: #A9B2C3;
+}
+
+a {
+    color: #5C95FF;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.input-field .prefix.active{
+    color: #5C95FF;
 }
