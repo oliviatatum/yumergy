@@ -2,21 +2,39 @@
 {% block content %}
 
     <div class="row">
-        <form class="col s12 m8 offset-m2">
-            <div class="card-panel">
+        <div class="col s12 m8 offset-m2">
+            <div>
                 <h3 class="center-align">
-                    {{ username }}'s Profile
+                    {{ username.capitalize() }}'s Profile
                 </h3>
             </div>
-        </form>
-    </div>
-
-    <div class="row">
-        <div class="col s12">
-            <p class="center-align">
-                Do you have an account yet? <a href="{{ url_for('register') }}">Register now!</a>
-            </p>
         </div>
     </div>
+    <div class="row">
+        <div class="col s12 card-panel m4 offset-m1">
+            <span> 
+                <h5><i class="fas fa-utensils"></i> My Meals </h5>
+            </span>
+        </div>
+        <div class="col s12 card-panel m4 offset-m2">
+            <span> 
+                <h5><i class="fas fa-list-ul"></i> My Shopping List </h5>
+            </span>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col s12 card-panel m4 offset-m1">
+            <span> 
+                <h5><i class="fas fa-grin-beam"></i> Recommended for Me </h5>
+            </span>
+        </div>
+        <div class="col s12 card-panel m4 offset-m2">
+            <span> 
+                <h5><i class="fas fa-cog"></i> My Preferences </h5>
+            </span>
+        </div>
+    </div>
+    
+
 
 {% endblock %}
