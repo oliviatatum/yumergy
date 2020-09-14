@@ -19,6 +19,16 @@ nav .brand-logo{
     text-shadow: 3px 3px 3px rgba(112, 12, 1, 0.5)
 }
 
+h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #403D58;
+}
+
 h4{
     margin: 0;
+}
+
+.fa-user-plus, .fa-user-lock{
+    color: #A9B2C3;
 }
