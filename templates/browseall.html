@@ -1,6 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="row">
+<h2 class="center-align">Browse All Meals</h2></div>
 
+<div class="row">
+    
+    <div class="col m3">
+        <div class="carousel">
+            <h5 class="center-align">Gluten Free</h5>
+            {% for meal in meals %}
+                {% if meal.gluten_free== 'on' %}
+                <ul class="carousel-indicators">
+                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="col m3">
+        <div class="carousel">
+            <h5 class="center-align">Dairy Free</h5>
+            {% for meal in meals %}
+                {% if meal.dairy_free=='on' %}
+                <ul class="carousel-indicators">
+                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+  
 <div class="row">
     {% for meal in meals %}
     

@@ -27,7 +27,7 @@ nav .brand-logo, h1{
     text-shadow: 3px 3px 3px rgba(112, 12, 1, 0.5)
 }
 
-h3{
+h2, h3{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     color: #403D58;
@@ -86,4 +86,8 @@ div.col.card-panel.m2{
 
 [type="checkbox"]+span:not(.lever){
     padding-right: 25px;
+}
+
+.carousel-img{
+    height: 50%;
 }

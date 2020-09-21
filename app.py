@@ -21,14 +21,14 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_meals")
 def get_meals():
-    meals = mongo.db.Meals.find()
+    meals = list(mongo.db.Meals.find())
     return render_template("meals.html", meals=meals)
 
 
 @app.route("/")
 @app.route("/browse_all")
 def browse_all():
-    meals = mongo.db.Meals.find()
+    meals = list(mongo.db.Meals.find())
     return render_template("browseall.html", meals=meals)
 
 
@@ -95,6 +95,31 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/add_meal", methods=["GET", "POST"])
+def add_meal():
+    if request.method == "POST":
+        meal = {
+            "meal_name": request.form.get("meal_name"),
+            "meal_time": request.form.get("meal_time"),
+            "meal_method": request.form.getlist("meal_method"),
+            "meal_ingredients": request.form.getlist("meal_ingredients"),
+            "dairy_free": request.form.get("dairy_free"),
+            "nut_free": request.form.get("nut_free"),
+            "gluten_free": request.form.get("gluten_free"),
+            "egg_free": request.form.get("egg_free"),
+            "vegan": request.form.get("vegan"),
+            "vegetarian": request.form.get("vegetarian"),
+            "meal_img": request.form.get("meal_img"),
+            "created_by": session["user"]
+
+        }
+        mongo.db.Meals.insert_one(meal)
+        flash("Meal Successfully Added")
+        return redirect(url_for("get_meals"))
+
+    return render_template("add_meal.html")
 
 
 if __name__ == "__main__":
