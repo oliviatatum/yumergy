@@ -1,27 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- header -->
 <div class="row">
     <h2 class="center-align"> Add a Meal </h2> 
 </div>
-<div class="row">
+
     <form class="col s12" method="POST" action="{{ url_for('add_meal') }}">
         <div class="row">
-            <div class="input-field col s6 offset-m3">
+            <div class="input-field col s11 m6 offset-m3">
                 <i class="fas fa-pencil-alt prefix"></i>
                 <input placeholder="What is your meal called?" id="meal_name" name="meal_name" type="text" class="validate">
                 <label for="meal_name">Meal Name</label>
             </div>
         </div>
          <div class="row">
-            <div class="input-field col s6 offset-m3">
+            <div class="input-field col s11 m6 offset-m3">
                 <i class="far fa-image prefix"></i>
-                <input placeholder="Put a image link here" id="meal_img" name="meal_img" type="text" class="validate">
+                <input placeholder="Paste an image link here" id="meal_img" name="meal_img" type="text" class="validate">
                 <label for="meal_img">Image Link </label>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col m6 offset-m3">
+            <div class="input-field col s11 m6 offset-m3">
             <i class="fas fa-utensils prefix"></i>
                     <select multiple>
                         <option value="breakfast">Breakfast</option>
@@ -33,10 +34,11 @@
             </div>
         </div>
         <div class="row">
-       <div class="input col m6 offset-m3" id="add_meal_checkboxes">
+       <div class="input-field col s12 m6 offset-m3" id="add_meal_checkboxes">
             <p class="center-align">
                 Please tick all that apply:<br>
                 <div class="row">
+                    <div class="col s6 m12">
                 <label for="dairy_free">
                     <input type="checkbox"  class="filled-in" checked="checked" id="dairy_free" name="dairy_free"/>
                         <span> Dairy-free </span>
@@ -50,7 +52,7 @@
                         <span> Gluten-free </span>
                 </label>
                 </div>
-                <div class="row">
+                <div class="col s6 m12">
                 <label for="egg_free">
                     <input type="checkbox" class="filled-in" checked="" id="egg_free" name="egg_free"/>
                         <span> Egg-free </span>
@@ -64,25 +66,26 @@
                         <span> Vegetarian </span>
                 </label>
                 </div>
+                </div>
             </p>
         </div>
         </div>
-        <div class="row"><p class="btn" id="addField"> + </p>
-            <div class="input-field col s6 offset-m3" id="ingredient_list">
+        <div class="row">
+            <div class="input-field col s11 m6 offset-m3" id="ingredient_list">
                 <i class="fas fa-list-ul prefix"></i>
                 <textarea id="meal_ingredients" name="meal_ingredients" class="materialize-textarea"></textarea>
-                <label for="meal_ingredients">Ingredients</label>
+                <label for="meal_ingredients">Ingredients</label><p class="btn right" id="addField"> + </p>
             </div>
            
         </div>
         <div class="row">
-            <p class="btn" id="addField2"> + </p>
-            <div class="input-field col s6 offset-m3">
+            
+            <div class="input-field col s11 m6 offset-m3">
             <i class="fas fa-edit prefix"></i>
             <ol id="instructions"><label for="meal_method">Recipe Instructions</label> 
-                <li><textarea id="meal_method" name="meal_method" class="materialize-textarea"></textarea></li>   
+                <li><textarea id="meal_method" name="meal_method" class="materialize-textarea"></textarea></li>
                 
-            </ol>
+            </ol><p class="btn right" id="addField2"> + </p>   
             </div>
             
         </div>
@@ -92,5 +95,5 @@
             </button>
         </div>
     </form>
-</div>
+
 {% endblock %}

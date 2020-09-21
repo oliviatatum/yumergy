@@ -87,7 +87,56 @@ div.col.card-panel.m2{
 [type="checkbox"]+span:not(.lever){
     padding-right: 25px;
 }
-
+textarea.materialize-textarea:focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]){
+    border-bottom: #5C95FF;
+    box-shadow: 0 1px 0 0 #5C95FF;
+}
+input[type=text]:not(.browser-default):focus:not([readonly])+label{
+    color: #5C95FF;
+}
+textarea.materialize-textarea:focus:not([readonly])+label{
+    color: #5C95FF;
+}
+[type="checkbox"]:checked+span:not(.lever):before{
+    border-right-color: #5C95FF;
+    border-bottom-color: #5C95FF;
+}
+[type="checkbox"].filled-in:checked+span:not(.lever):after{
+    border: 2px solid #FE6F5E;
+    background-color: #FE6F5E;
+}
+.input-field [type="checkbox"]+span{
+    color: #403D58;
+}
 .carousel-img{
     height: 50%;
+}
+
+.fas, .far{
+    color: #403D58;
+}
+.input-field label{
+    color: #FE6F5E;
+}
+::placeholder{
+    color: #A9B2C3;
+}
+@media (min-width: 320px) {
+::placeholder{
+    font-size: 11px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+}
+
+@media (min-width: 480px) {
+    ::placeholder{
+    font-size: 22px;
+    }
+    h2{
+        font-size: 3.56rem;
+    }
 }
