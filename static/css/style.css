@@ -16,7 +16,9 @@ nav .brand-logo, h1{
     letter-spacing: 2px;
     color: #fff6eb;
 }
-
+.sidenav .brand-logo{
+    height: 50px;
+}
 .flashes h5{
     line-height: 2;
 }
@@ -129,18 +131,35 @@ textarea.materialize-textarea:focus:not([readonly])+label{
     color: #A9B2C3;
 }
 
-span .option{
-    width: 40px;
-}
-@media (min-width: 320px) {
-::placeholder{
-    font-size: 11px;
+nav .nav-wrapper {
+    width: 100%;
 }
 
+@media (min-width: 320px) {
+::placeholder{
+    font-size: 9px;
+}
+.big-text{
+    font-size: 50px;
+}
 h2 {
     font-size: 24px;
 }
-
+h5{
+    font-size: 1.3rem;
+}
+[type="checkbox"]+span:not(.lever){
+    font-size: 12px;
+}
+.input-field>label{
+    font-size: 10px;
+}
+*, *:before, *:after{
+    margin-left: 5px;
+}
+.row .col{
+    padding: 0 0 0 5px;
+}
 }
 
 @media (min-width: 480px) {
@@ -150,4 +169,19 @@ h2 {
     h2{
         font-size: 3.56rem;
     }
+    .input-field>label{
+    font-size: 12px;
+    }
+    [type="checkbox"]+span:not(.lever){
+    font-size: 13px
+}
+
+@media (min-width: 600px) {
+    [type="checkbox"]+span:not(.lever){
+    font-size: 14px;
+    }
+    .input-field>label{
+    font-size: 14px;
+}
+}
 }
