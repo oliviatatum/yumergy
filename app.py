@@ -112,6 +112,7 @@ def add_meal():
             "vegan": request.form.get("vegan"),
             "vegetarian": request.form.get("vegetarian"),
             "meal_img": request.form.get("meal_img"),
+            "meal_calories": request.form.get("meal_calories", type=int),
             "created_by": session["user"]
 
         }

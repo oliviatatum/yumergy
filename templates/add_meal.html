@@ -24,11 +24,11 @@
         <div class="row">
             <div class="input-field col s11 m6 offset-m3">
             <i class="fas fa-utensils prefix"></i>
-                    <select multiple>
-                        <option value="breakfast">Breakfast</option>
-                        <option value="lunch">Lunch</option>
-                        <option value="dinner">Dinner</option>
-                        <option value="snack">Snack</option>
+                    <select multiple name="meal_time">
+                        <option value="breakfast" name="breakfast">Breakfast</option>
+                        <option value="lunch" name="lunch">Lunch</option>
+                        <option value="dinner" name="dinner">Dinner</option>
+                        <option value="snack" name="snack">Snack</option>
                     </select>
                 <label>Type of meal</label>
             </div>
@@ -38,7 +38,6 @@
             <p class="center-align">
                 Please tick all that apply:<br>
                 <div class="row">
-                    <div class="col s6 m12">
                 <label for="dairy_free">
                     <input type="checkbox"  class="filled-in" checked="checked" id="dairy_free" name="dairy_free"/>
                         <span> Dairy-free </span>
@@ -51,8 +50,6 @@
                     <input type="checkbox" class="filled-in" checked="" id="gluten_free" name="gluten_free"/>
                         <span> Gluten-free </span>
                 </label>
-                </div>
-                <div class="col s6 m12">
                 <label for="egg_free">
                     <input type="checkbox" class="filled-in" checked="" id="egg_free" name="egg_free"/>
                         <span> Egg-free </span>
@@ -66,28 +63,41 @@
                         <span> Vegetarian </span>
                 </label>
                 </div>
-                </div>
             </p>
         </div>
         </div>
+
         <div class="row">
             <div class="input-field col s11 m6 offset-m3" id="ingredient_list">
-                <i class="fas fa-list-ul prefix"></i>
-                <textarea id="meal_ingredients" name="meal_ingredients" class="materialize-textarea"></textarea>
-                <label for="meal_ingredients">Ingredients</label><p class="btn right" id="addField"> + </p>
+                <i class="fas fa-list-ul prefix"></i><label for="meal_ingredients">Ingredients</label>
+                <ul id="ingredients">
+                
+                    <li>
+                        <textarea id= "meal_ingredients" name="meal_ingredients" class="materialize-textarea"></textarea>
+                    </li>
+                
+                </ul><p class="btn right" id="addField"> + </p>
             </div>
-           
         </div>
         <div class="row">
             
             <div class="input-field col s11 m6 offset-m3">
-            <i class="fas fa-edit prefix"></i>
-            <ol id="instructions"><label for="meal_method">Recipe Instructions</label> 
-                <li><textarea id="meal_method" name="meal_method" class="materialize-textarea"></textarea></li>
-                
-            </ol><p class="btn right" id="addField2"> + </p>   
+                <i class="fas fa-edit prefix"></i>
+                    <ol id="instructions"><label for="meal_method">Recipe Instructions</label> 
+                        <li>
+                            <textarea id="meal_method" name="meal_method" class="materialize-textarea"></textarea>
+                        </li>
+                        
+                    </ol><p class="btn right" id="addField2"> + </p>   
             </div>
             
+        </div>
+        <div class="row">
+            <div class="input-field col s11 m6 offset-m3">
+                <i class="fas fa-seedling prefix"></i>
+                <input id="meal_calories" name="meal_calories" type="number" class="validate">
+                <label for="meal_calories">Calories per portion</label>
+            </div>
         </div>
         <div class="row">
             <button type="submit" class="col s4 offset-m4 btn-large bittersweet text-shadow">

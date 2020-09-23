@@ -30,8 +30,104 @@
             {% endfor %}
         </div>
     </div>
+    <div class="col m3">
+        <div class="carousel">
+            <h5 class="center-align">Vegan</h5>
+            {% for meal in meals %}
+                {% if meal.vegan=='on' %}
+                <ul class="carousel-indicators">
+                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col m3">
+        <div class="carousel">
+            <h5 class="center-align">Vegetarian</h5>
+            {% for meal in meals %}
+                {% if meal.vegetarian=='on' %}
+                <ul class="carousel-indicators">
+                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col m3">
+        <div class="carousel">
+            <h5 class="center-align">Nut Free</h5>
+            {% for meal in meals %}
+                {% if meal.nut_free=='on' %}
+                <ul class="carousel-indicators">
+                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+   
+      <div class="col m3">
+        <div class="carousel">
+            <h5 class="center-align">Breakfasts</h5>
+            {% for meal in meals %}
+                {% if meal.meal_time=='breakfast' %}
+                <ul class="carousel-indicators">
+                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+     <div class="col m3">
+        <div class="carousel">
+            <h5 class="center-align">Lunches</h5>
+            {% for meal in meals %}
+                {% if meal.meal_time=='lunch' %}
+                <ul class="carousel-indicators">
+                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+     <div class="col m3">
+        <div class="carousel">
+            <h5 class="center-align">Dinners</h5>
+            {% for meal in meals %}
+                {% if meal.meal_time=='dinner' %}
+                <ul class="carousel-indicators">
+                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+     <div class="col m3">
+        <div class="carousel">
+            <h5 class="center-align">Snacks</h5>
+            {% for meal in meals %}
+                {% if meal.meal_time=='snack' %}
+                <ul class="carousel-indicators">
+                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+      <div class="col m3">
+        <div class="carousel">
+            <h5 class="center-align">Under 400 Calories</h5>
+            {% for meal in meals %}
+                {% if meal.meal_calories|int < 400 %}
+                <ul class="carousel-indicators">
+                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
-
   
 <div class="row">
     {% for meal in meals %}
@@ -49,7 +145,8 @@
             <img class="meal_images center-align" src="{{ meal.meal_img}}" alt="{{ meal.meal_name }}" image-width="50px">
         </div>
    
-    {% endfor %}
+    {% endfor %} 
+    
  </div>
 
 {% endblock %}
