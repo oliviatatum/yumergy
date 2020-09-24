@@ -134,7 +134,15 @@ textarea.materialize-textarea:focus:not([readonly])+label{
 nav .nav-wrapper {
     width: 100%;
 }
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+ul.ingredients{
+    list-style-type: circle;
+}
 @media (min-width: 320px) {
 ::placeholder{
     font-size: 9px;

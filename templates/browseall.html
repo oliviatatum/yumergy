@@ -11,7 +11,7 @@
             {% for meal in meals %}
                 {% if meal.gluten_free== 'on' %}
                 <ul class="carousel-indicators">
-                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                    <li><a class="carousel-item center-align" href="{{ url_for('recipe', recipe_id=meal._id) }}"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
                 </ul>
                 {% endif %}
             {% endfor %}
@@ -24,7 +24,7 @@
             {% for meal in meals %}
                 {% if meal.dairy_free=='on' %}
                 <ul class="carousel-indicators">
-                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                    <li><a class="carousel-item center-align" href="{{ url_for('recipe', recipe_id=meal._id) }}"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
                 </ul>
                 {% endif %}
             {% endfor %}
@@ -36,7 +36,7 @@
             {% for meal in meals %}
                 {% if meal.vegan=='on' %}
                 <ul class="carousel-indicators">
-                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                    <li><a class="carousel-item center-align" href="{{ url_for('recipe', recipe_id=meal._id) }}"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
                 </ul>
                 {% endif %}
             {% endfor %}
@@ -48,7 +48,7 @@
             {% for meal in meals %}
                 {% if meal.vegetarian=='on' %}
                 <ul class="carousel-indicators">
-                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                    <li><a class="carousel-item center-align" href="{{ url_for('recipe', recipe_id=[meal._id]) }}"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
                 </ul>
                 {% endif %}
             {% endfor %}
@@ -60,7 +60,7 @@
             {% for meal in meals %}
                 {% if meal.nut_free=='on' %}
                 <ul class="carousel-indicators">
-                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                    <li><a class="carousel-item center-align" href="{{ url_for('recipe', recipe_id=meal._id) }}"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
                 </ul>
                 {% endif %}
             {% endfor %}
@@ -73,7 +73,7 @@
             {% for meal in meals %}
                 {% if meal.meal_time=='breakfast' %}
                 <ul class="carousel-indicators">
-                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                    <li><a class="carousel-item center-align" href="{{ url_for('recipe', recipe_id=meal._id) }}"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
                 </ul>
                 {% endif %}
             {% endfor %}
@@ -85,7 +85,7 @@
             {% for meal in meals %}
                 {% if meal.meal_time=='lunch' %}
                 <ul class="carousel-indicators">
-                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                    <li><a class="carousel-item center-align" href="{{ url_for('recipe', recipe_id=meal._id) }}"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
                 </ul>
                 {% endif %}
             {% endfor %}
@@ -97,7 +97,7 @@
             {% for meal in meals %}
                 {% if meal.meal_time=='dinner' %}
                 <ul class="carousel-indicators">
-                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                    <li><a class="carousel-item center-align" href="{{ url_for('recipe', recipe_id=meal._id) }}"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
                 </ul>
                 {% endif %}
             {% endfor %}
@@ -109,7 +109,7 @@
             {% for meal in meals %}
                 {% if meal.meal_time=='snack' %}
                 <ul class="carousel-indicators">
-                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                    <li><a class="carousel-item center-align" href="{{ url_for('recipe', recipe_id=meal._id) }}"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
                 </ul>
                 {% endif %}
             {% endfor %}
@@ -121,7 +121,7 @@
             {% for meal in meals %}
                 {% if meal.meal_calories|int < 400 %}
                 <ul class="carousel-indicators">
-                    <li><a class="carousel-item center-align" href="#"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
+                    <li><a class="carousel-item center-align" href="{{ url_for('recipe', recipe_id=meal._id) }}"><img class="carousel-img" src="{{ meal.meal_img }}" ><strong>{{ meal.meal_name }}</strong></a></li>
                 </ul>
                 {% endif %}
             {% endfor %}

@@ -123,6 +123,13 @@ def add_meal():
     return render_template("add_meal.html")
 
 
+@app.route("/recipe/<recipe_id>")
+def recipe(recipe_id):
+    recipe = mongo.db.Meals.find_one(
+        {'_id': ObjectId(recipe_id)})
+    return render_template("recipe.html", recipe=recipe)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
