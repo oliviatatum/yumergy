@@ -13,21 +13,21 @@
         <div class="row">
             <div class="input-field col s11 m6 offset-m3">
                 <i class="fas fa-pencil-alt prefix"></i>
-                <input placeholder="What is your meal called?" id="meal_name" name="meal_name" type="text" class="validate">
+                <input placeholder="What is your meal called?" id="meal_name" name="meal_name" type="text" class="validate" required>
                 <label for="meal_name">Meal Name</label>
             </div>
         </div>
          <div class="row">
             <div class="input-field col s11 m6 offset-m3">
                 <i class="far fa-image prefix"></i>
-                <input placeholder="Paste an image link here" id="meal_img" name="meal_img" type="text" class="validate">
+                <input placeholder="Paste an image link here" id="meal_img" name="meal_img" type="text" class="validate" required>
                 <label for="meal_img">Image Link </label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s11 m6 offset-m3">
             <i class="fas fa-utensils prefix"></i>
-                    <select multiple name="meal_time">
+                    <select multiple name="meal_time" required>
                         <option value="breakfast" name="breakfast">Breakfast</option>
                         <option value="lunch" name="lunch">Lunch</option>
                         <option value="dinner" name="dinner">Dinner</option>
@@ -88,7 +88,7 @@
                 <ul id="ingredients">
                 
                     <li>
-                        <textarea id= "meal_ingredients" name="meal_ingredients" class="materialize-textarea"></textarea>
+                        <textarea id= "meal_ingredients" name="meal_ingredients" class="materialize-textarea" required></textarea>
                     </li>
                 
                 </ul><p class="btn right" id="addField"> + </p>
@@ -100,7 +100,7 @@
                 <i class="fas fa-edit prefix"></i>
                     <ol id="instructions"><label for="meal_method">Recipe Instructions</label> 
                         <li>
-                            <textarea id="meal_method" name="meal_method" class="materialize-textarea"></textarea>
+                            <textarea id="meal_method" name="meal_method" class="materialize-textarea" required></textarea>
                         </li>
                         
                     </ol><p class="btn right" id="addField2"> + </p>   
@@ -110,7 +110,7 @@
         <div class="row">
             <div class="input-field col s11 m6 offset-m3">
                 <i class="fas fa-seedling prefix"></i>
-                <input id="meal_calories" name="meal_calories" type="number" class="validate">
+                <input id="meal_calories" name="meal_calories" type="number" class="validate" required>
                 <label for="meal_calories">Calories per portion</label>
             </div>
         </div>
