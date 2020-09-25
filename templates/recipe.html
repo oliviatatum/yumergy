@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-
 <div class="row">
-    <h2 class="center-align">{{ recipe.meal_name }}</h2>
-    <p class="center-align">By {{ recipe.created_by}}</p>
+    <a href="{{ url_for('browse_all') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to browse</p></a>
+</div>
+<div class="row">
+    <h2 class="center-align">{{ recipe.meal_name.capitalize() }}</h2>
+    <p class="center-align">By {{ recipe.created_by.capitalize() }}</p>
 </div>
 <div class="row">
     <img src="{{ recipe.meal_img }}" alt="{{ recipe.meal_name }}" class="center">
@@ -14,7 +16,7 @@
 
     <ul class="browser-default">
         {% for ingredient in recipe.meal_ingredients %}
-            <li>{{ ingredient }}</li>
+            <li>{{ ingredient.capitalize() }}</li>
         {% endfor %}
     </ul>
 </div>
@@ -29,8 +31,15 @@
         {% endfor %}
     </ol>
 </div>
+
+</div>
+<div class="row">
+    <div class="col s6 offset-s3">
+        <p>Calories per serving: {{ recipe.meal_calories }}</p>
+    </div>
 </div>
 
-
-
+<div class="row">
+    <a href="{{ url_for('browse_all') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to browse</p></a>
+</div>
 {% endblock %}

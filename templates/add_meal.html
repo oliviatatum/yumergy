@@ -3,6 +3,9 @@
 
 <!-- header -->
 <div class="row">
+    <a href="{{ url_for('get_meals') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to search</p></a>
+</div>
+<div class="row">
     <h2 class="center-align"> Add a Meal </h2> 
 </div>
 
@@ -117,5 +120,9 @@
             </button>
         </div>
     </form>
+
+<div class="row">
+    <a href="{{ url_for('get_meals') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to search</p></a>
+</div>
 
 {% endblock %}

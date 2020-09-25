@@ -6,11 +6,11 @@
 
 <div class="row">
     <!--Super Search Bar-->
-    <form class="col m8 offset-m2">
+    <form action="{{ url_for('search') }}" method="POST" class="col m8 offset-m2" >
         <div class="row">
             <h5> What Do You Fancy? </h5>
             <div class="input-field col s12">
-                <textarea id="mainsearch" class="materialize-textarea"></textarea>
+                <textarea type="text" name="mainsearch" id="mainsearch" minlength="3" class="materialize-textarea" required ></textarea>
                 <label for="mainsearch">e.g. Lasagne, Chinese, Party Food, Barbeque, Asparagus... </label>
             </div>
         </div>
@@ -56,14 +56,25 @@
                             </label>
                         </div>
                     </div> 
+                    
                 </div>
-        
+            <div class="row">
+                <button type="submit" class="col s4 offset-m4 btn-large bittersweet text-shadow">
+                    Search! <i class="fas fa-magic"></i>
+                </button>
+            </div>
     </form>
-        <br>
+<br>
         
 </div>
  <div class="row center-align">
             Need some inspiration? <a href="{{ url_for('browse_all') }}">Browse all recipes.</a>
 </div>  
 
+ 
+    {%if meals %}
+        {% for meal in meals %}
+            <p>{{ meals.meal_name }}</p>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

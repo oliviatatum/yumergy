@@ -25,6 +25,13 @@ def get_meals():
     return render_template("meals.html", meals=meals)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    mainsearch = request.form.get("mainsearch")
+    meals = list(mongo.db.Meals.find({"$text": {"$search": mainsearch}}))
+    return render_template("searchresults.html", meals=meals)
+
+
 @app.route("/")
 @app.route("/browse_all")
 def browse_all():

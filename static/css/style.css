@@ -1,37 +1,62 @@
+
+/*  Keeps the main body of the page the same height,
+    so the container will scroll instead, and the background image
+    won't become distorted */
+
 html, body{
     height: 100%;
 }
 
+body{
+    background-image: url('https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: 100%;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    height: 80%;
+    overflow: scroll;
+    margin-top: 25px;
+}
+
+
+/* Custom colours and styles */
+
 .bittersweet{
     background-color: #FE6F5E;
 }
-
+.bittersweet-text{
+    color: #FE6F5E;
+}
 .cadet-blue {
     background-color: #A9B2C3;
 }
-nav .brand-logo, h1{
-    font-family: 'Pacifico', cursive;
-    font-size: 32px;
-    text-indent: 15px;
-    letter-spacing: 2px;
-    color: #fff6eb;
-}
-.sidenav .brand-logo{
-    height: 50px;
-}
-.flashes h5{
-    line-height: 2;
+
+.cornflower-blue{
+    color: #5C95FF;
 }
 
-.sidenav .brand-logo{
-    font-family: 'Pacifico', cursive;
-    font-size: 26px;
-    letter-spacing: 2px;
-    color: #fff6eb;
+.big-text{
+    font-size: 75px;
+    font-family: 'Open Sans', sans-serif;
+    color: #FE6F5E;
+    font-weight: 300;
 }
+
+.center { /* center align images */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .text-shadow{
     text-shadow: 3px 3px 3px rgba(112, 12, 1, 0.5)
 }
+
+
+/* headings */
 
 h2, h3{
     font-family: 'Open Sans', sans-serif;
@@ -48,60 +73,79 @@ h5{
     font-weight: 300;
 }
 
-.fa-user-plus, .fa-user-lock, .fa-user-cog{
-    color: #A9B2C3;
-}
+/* Text */
 
 a {
     color: #5C95FF;
 }
 
-p{
+p, li{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 }
+
+/* Nav and sidenav */
+
+nav .brand-logo, h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    text-indent: 15px;
+    letter-spacing: 2px;
+    color: #fff6eb;
+}
+nav .nav-wrapper {
+    width: 100%;
+}
+
+.sidenav .brand-logo{
+    height: 50px;
+}
+.sidenav .brand-logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #fff6eb;
+}
+
+/* flashes */
+.flashes h5{
+    line-height: 2;
+}
+
+
+/* Font Awesome */
+
+.fa-user-plus, .fa-user-lock, .fa-user-cog{
+    color: #A9B2C3;
+}
+.fas .fa-pencil-alt, .far .fa-image{
+    color: #403D58;
+}
+.fas .fa-long-arrow-alt-left{
+    color: #FE6F5E;
+}
+
+
+/* forms */
 
 .input-field .prefix.active{
     color: #5C95FF;
 }
-body{
-    background-image: url('https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    background-size: 100%;
+.input-field [type="checkbox"]+span{
+    color: #403D58;
 }
-.container{
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 80%;
-    height: 80%;
-    overflow: scroll;
-    margin-top: 25px;
+input[type=text]:not(.browser-default):focus:not([readonly])+label{
+    color: #5C95FF;
 }
-
-.meal_images{
-    width: 100%;
-}
-
-div.col.card-panel.m2{
-    margin-left: 20px;
-    height: 250px;
-}
-
-.big-text{
-    font-size: 75px;
-    font-family: 'Open Sans', sans-serif;
+.input-field label{
     color: #FE6F5E;
-    font-weight: 300;
-
 }
-
 [type="checkbox"]+span:not(.lever){
     padding-right: 25px;
 }
 textarea.materialize-textarea:focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]){
     border-bottom: #5C95FF;
     box-shadow: 0 1px 0 0 #5C95FF;
-}
-input[type=text]:not(.browser-default):focus:not([readonly])+label{
-    color: #5C95FF;
 }
 textarea.materialize-textarea:focus:not([readonly])+label{
     color: #5C95FF;
@@ -114,35 +158,38 @@ textarea.materialize-textarea:focus:not([readonly])+label{
     border: 2px solid #FE6F5E;
     background-color: #FE6F5E;
 }
-.input-field [type="checkbox"]+span{
-    color: #403D58;
-}
-.carousel-img{
-    height: 50%;
-}
-
-.fas, .far{
-    color: #403D58;
-}
-.input-field label{
-    color: #FE6F5E;
-}
 ::placeholder{
     color: #A9B2C3;
 }
 
-nav .nav-wrapper {
+
+.meal_images{
     width: 100%;
 }
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+
+div.col.card-panel.m2{
+    margin-left: 20px;
+    height: 250px;
 }
+
+
+/* carousel */
+.carousel-img{
+    height: 50%;
+}
+
+
+/* recipes */
 ul.ingredients{
     list-style-type: circle;
 }
+
+
+/*---------------------------
+  M E D I A  Q U E R I E S 
+ ---------------------------- */
+
+/* extra small screens */
 @media (min-width: 320px) {
 ::placeholder{
     font-size: 9px;
@@ -162,14 +209,12 @@ h5{
 .input-field>label{
     font-size: 10px;
 }
-*, *:before, *:after{
-    margin-left: 5px;
-}
 .row .col{
     padding: 0 0 0 5px;
 }
 }
 
+/* small screens */
 @media (min-width: 480px) {
     ::placeholder{
     font-size: 22px;
@@ -177,19 +222,30 @@ h5{
     h2{
         font-size: 3.56rem;
     }
+    h5{
+    font-size: 1.5rem;
+    }
     .input-field>label{
     font-size: 12px;
     }
     [type="checkbox"]+span:not(.lever){
     font-size: 13px
+    }
 }
 
+/* medium screens */
 @media (min-width: 600px) {
     [type="checkbox"]+span:not(.lever){
     font-size: 14px;
     }
     .input-field>label{
     font-size: 14px;
+    }
+    h5{
+    font-size: 1.64rem;
+    }
+    .big-text{
+    font-size: 75px;
+    }
 }
-}
-}
+

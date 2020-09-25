@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <a href="{{ url_for('get_meals') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to search</p></a>
+</div>
+<div class="row">
+    <h2 class="center-align">Search Results</h2>
+</div>
+
+<div class="row">
+    {% for meal in meals %}
+    
+        <div class="col card-panel m2">
+            <a href="{{ url_for('recipe', recipe_id=meal._id) }}"><h5>{{ meal.meal_name }}</h5></a>
+            #{{ meal.meal_time }} 
+                {% if meal.dairy_free %}
+                    #dairy-free
+                {% endif %}
+                {% if meal.gluten_free %}
+                    #gluten-free
+                {% endif %}
+            <br>{{ meal.meal_calories }} calories<br>
+            <a href="{{ url_for('recipe', recipe_id=meal._id) }}"><img class="meal_images center-align" src="{{ meal.meal_img}}" alt="{{ meal.meal_name }}" image-width="50px"></a>
+        </div>
+   
+    {% endfor %} 
+    
+ </div>
+{% endblock %}
