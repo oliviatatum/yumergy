@@ -171,6 +171,16 @@ textarea.materialize-textarea:focus:not([readonly])+label{
 ::placeholder{
     color: #A9B2C3;
 }
+
+#meal_ingredients::placeholder{
+    font-size: 15px;
+    padding-top: 8px;
+    text-indent: 40px;
+}
+#meal_method::placeholder{
+    font-size: 15px;
+    padding-top: 8px;
+}
 .btn-large:hover{
     background-color: rgb(247, 103, 88);
 }

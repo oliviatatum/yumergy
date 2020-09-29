@@ -20,7 +20,7 @@
          <div class="row">
             <div class="input-field col s11 m6 offset-m3">
                 <i class="far fa-image prefix"></i>
-                <input placeholder="Paste an image link here" id="meal_img" name="meal_img" type="text" class="validate" required>
+                <input placeholder="Paste an image link here" id="meal_img" name="meal_img" type="url" class="validate" required>
                 <label for="meal_img">Image Link </label>
             </div>
         </div>
@@ -89,7 +89,7 @@
                 <ul id="ingredients">
                 
                     <li>
-                        <textarea id= "meal_ingredients" name="meal_ingredients" class="materialize-textarea" required></textarea>
+                        <textarea id= "meal_ingredients" name="meal_ingredients" class="materialize-textarea" placeholder="  e.g. One cup of baby leaf spinach" required></textarea>
                     </li>
                 
                 </ul><p class="btn right" id="addField"> Add a new line + </p>
@@ -101,7 +101,7 @@
                 <i class="fas fa-edit prefix"></i>
                     <ol id="instructions"><label for="meal_method">Recipe Instructions</label> 
                         <li>
-                            <textarea id="meal_method" name="meal_method" class="materialize-textarea" required></textarea>
+                            <textarea id="meal_method" name="meal_method" class="materialize-textarea" placeholder="e.g. Boil pasta in 500ml of water for 11 minutes." required></textarea>
                         </li>
                         
                     </ol><p class="btn right" id="addField2"> Add a new line + </p>   

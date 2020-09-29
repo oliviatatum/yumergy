@@ -111,6 +111,7 @@ def logout():
 @app.route("/add_meal", methods=["GET", "POST"])
 def add_meal():
     if request.method == "POST":
+
         meal = {
             "meal_name": request.form.get("meal_name"),
             "meal_time": request.form.get("meal_time"),
@@ -125,11 +126,11 @@ def add_meal():
             "meal_img": request.form.get("meal_img"),
             "meal_calories": request.form.get("meal_calories", type=int),
             "created_by": session["user"]
-
         }
         mongo.db.Meals.insert_one(meal)
         flash("Meal Successfully Added")
-        return redirect(url_for("get_meals"))
+        recipe = mongo.db.Meals.find_one(meal)
+        return render_template("recipe.html", recipe=recipe)
 
     return render_template("add_meal.html")
 
