@@ -29,7 +29,11 @@ def get_meals():
 def search():
     mainsearch = request.form.get("mainsearch")
     meals = list(mongo.db.Meals.find({"$text": {"$search": mainsearch}}))
-    return render_template("searchresults.html", meals=meals)
+    noResults = "No results found."
+    if not meals:
+        return render_template("searchresults.html", noResults=noResults)
+    else:
+        return render_template("searchresults.html", meals=meals)
 
 
 @app.route("/")

@@ -6,7 +6,10 @@
 <div class="row">
     <h2 class="center-align">Search Results</h2>
 </div>
-
+<p class="center-align">{{ noResults }}</p>
+{% if noResults %}
+    <p class="center-align">  Why not <a href="{{ url_for('add_meal') }}">add your own recipe?</a></p>
+{% endif %}
 <div class="row">
     {% for meal in meals %}
     

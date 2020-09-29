@@ -79,6 +79,10 @@ a {
     color: #5C95FF;
 }
 
+a:hover{
+    color: rgb(83, 137, 238);
+}
+
 p, li{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -167,7 +171,9 @@ textarea.materialize-textarea:focus:not([readonly])+label{
 ::placeholder{
     color: #A9B2C3;
 }
-
+.btn-large:hover{
+    background-color: rgb(247, 103, 88);
+}
 
 .meal_images{
     width: 100%;
@@ -178,10 +184,14 @@ div.col.card-panel.m2{
     height: 250px;
 }
 
+#searchSubmit {
+    margin-top: 20px;
+}
 
 /* carousel */
 .carousel-img{
-    height: 50%;
+    height: 100px;
+    width: 200px;
 }
 
 
