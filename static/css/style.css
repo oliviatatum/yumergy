@@ -8,8 +8,9 @@ html, body{
 }
 
 body{
-    background-image: url('https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-    background-size: 100%;
+    background-image: url('https://images.pexels.com/photos/1580466/pexels-photo-1580466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    
 }
 
 .container{
@@ -272,6 +273,9 @@ h5{
     }
     .big-text{
     font-size: 75px;
+    }
+    body{
+        background-image: url('https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
     }
 }
 
