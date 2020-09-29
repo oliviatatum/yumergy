@@ -227,6 +227,9 @@ ul.ingredients{
 h2 {
     font-size: 24px;
 }
+h3{
+    font-size: 20px;
+}
 h5{
     font-size: 1.3rem;
 }
@@ -267,6 +270,9 @@ h5{
     }
     .input-field>label{
     font-size: 14px;
+    }
+    h3{
+        font-size: 40px;
     }
     h5{
     font-size: 1.64rem;

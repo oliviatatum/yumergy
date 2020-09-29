@@ -11,8 +11,8 @@
     <img src="{{ recipe.meal_img }}" alt="{{ recipe.meal_name }}" class="center">
 </div>
 <div class="row">
-<div class="col s6 offset-s3">
-    <h3>Ingredients</h3>
+<div class="col m6 offset-m3">
+    <h3 class="center-align">Ingredients</h3>
 
     <ul class="browser-default">
         {% for ingredient in recipe.meal_ingredients %}
@@ -22,8 +22,8 @@
 </div>
 </div>
 <div class="row">
-<div class="col s6 offset-s3">
-    <h3>Method</h3>
+<div class="col m6 offset-m3">
+    <h3 class="center-align">Method</h3>
 
     <ol>
         {% for step in recipe.meal_method %}
@@ -34,7 +34,7 @@
 
 </div>
 <div class="row">
-    <div class="col s6 offset-s3">
+    <div class="col m6 offset-m3">
         <p>Calories per serving: {{ recipe.meal_calories }}</p>
     </div>
 </div>
