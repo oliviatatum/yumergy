@@ -128,6 +128,12 @@ nav .nav-wrapper {
 
 /* forms */
 
+.username-caption, .password-caption{
+    color: #A9B2C3;
+    font-size: 10px;
+    text-indent: 50px;
+}
+
 .input-field .prefix.active{
     color: #5C95FF;
 }

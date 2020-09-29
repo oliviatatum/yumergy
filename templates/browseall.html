@@ -5,8 +5,8 @@
     <a href="{{ url_for('get_meals') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to search</p></a>
 </div>
 <div class="row">
-
-<h2 class="center-align">Browse All Meals</h2></div>
+    <h2 class="center-align">Browse All Meals</h2>
+</div>
 
 <div class="row">
     
@@ -134,24 +134,6 @@
     </div>
 </div>
   
-<div class="row">
-    {% for meal in meals %}
-    
-        <div class="col card-panel m2">
-            <h5>{{ meal.meal_name }}</h5>
-            #{{ meal.meal_time }} 
-                {% if meal.dairy_free %}
-                    #dairy-free
-                {% endif %}
-                {% if meal.gluten_free %}
-                    #gluten-free
-                {% endif %}
-            <br>{{ meal.meal_calories }} calories<br>
-            <img class="meal_images center-align" src="{{ meal.meal_img}}" alt="{{ meal.meal_name }}" image-width="50px">
-        </div>
-   
-    {% endfor %} 
-    
- </div>
+
 
 {% endblock %}
