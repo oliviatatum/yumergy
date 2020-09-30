@@ -88,9 +88,10 @@ I created the colour palette for Yumergy using the <a href="coolors.co" target="
 food and is psychologically supposed to make people feel hungrier, which is ideal for a website based around food. I liked Bittersweet, the colour I chose for this purpose, because it was bold 
 without being too garish and harsh for the user to look at. For the other colours, I wanted to create contrast by using blues, as they are opposite red/orange shades in the colour wheel.
 
-The background of all the pages is an image of bread, strawberries and avocado displayed on a pale marble surface. I chose this image because it added interest and related to the website's
+The background of all the pages on medium and large screens is an image of bread, strawberries and avocado displayed on a pale marble surface. I chose this image because it added interest and related to the website's
 goals, while not being too busy and distracting for the user, as most of the image is white space. This image is consistent across all pages of the site. The translucent container keeps the text 
-readable while the background image remains visible.
+readable while the background image remains visible. The background on small screens is a different image with some salad and green vegetables, which stands out well compared to the navbar. I added a different 
+image for small screen due to sizing issues. 
 
 For fonts, I chose a handwriting-style font for the company name of Yumergy, as it looks friendlier and less formal than other fonts. For the rest of the text on the site, I used a sans serif font,
 for it's clear readablity. Headings have a text-shadow effect to help them stand out and look nicer.
@@ -113,8 +114,12 @@ as well as discovering some new meals that he loves.
 </pre>
 
 <h4>Wire Frames</h4>
-
-
+<ul>
+<li><a href="https://github.com/oliviatatum/yumergy/blob/master/wireframes/PHOTO-2020-09-30-20-51-20.jpg?raw=true"> Wireframe 1 </a> A first draft of the main search page</li> 
+<li><a href="https://github.com/oliviatatum/yumergy/blob/master/wireframes/PHOTO-2020-09-30-20-46-28.jpg?raw=true"> Wireframe 2 </a> The final design wireframe for the main search page (ran out of space for all the links in the navbar).</li>
+<li><a href="https://github.com/oliviatatum/yumergy/blob/master/wireframes/doc30-09-2020%202.JPG?raw=true"> Wireframe 3 </a>A rough layout idea for the Browse All Meals page</li>
+<li><a href="https://github.com/oliviatatum/yumergy/blob/master/wireframes/doc30-09-2020.JPG?raw=true"> Wireframe 4 </a>A plan of how I would present the site on mobile devices. </li>
+</ul>
 ----------------------------------------
 <h2><b>Features</b></h2>
 
@@ -160,7 +165,9 @@ as well as discovering some new meals that he loves.
 
 <h2><b>Testing</b></h2>
 
-<a href="https://github.com/oliviatatum/yumergy/blob/master/Yumergy%20Manual%20Test.pdf">Manual testing documentation</a> 
+I used <a href="https://jshint.com"> jshint </a> to validate my JavaScript and <a href="https://jigsaw.w3.org/css-validator/">W3C CSS Validation</a> to validate my CSS.
+
+<a href="https://github.com/oliviatatum/yumergy/blob/master/Yumergy%20Manual%20Test.pdf">Manual testing documentation</a>
 
 <h2><b>Deployment</b></h2>
 
