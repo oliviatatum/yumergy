@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 @app.route("/get_meals")
 def get_meals():
     meals = list(mongo.db.Meals.find())
-    return render_template("meals.html", meals=meals)
+    return render_template("search.html", meals=meals)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -133,6 +133,41 @@ def add_meal():
         return render_template("recipe.html", recipe=recipe)
 
     return render_template("add_meal.html")
+
+
+@app.route("/edit_meal/<meal_id>", methods=["GET", "POST"])
+def edit_meal(meal_id):
+    if request.method == "POST":
+
+        meal = {
+            "meal_name": request.form.get("meal_name"),
+            "meal_time": request.form.get("meal_time"),
+            "meal_method": request.form.getlist("meal_method"),
+            "meal_ingredients": request.form.getlist("meal_ingredients"),
+            "dairy_free": request.form.get("dairy_free"),
+            "nut_free": request.form.get("nut_free"),
+            "gluten_free": request.form.get("gluten_free"),
+            "egg_free": request.form.get("egg_free"),
+            "vegan": request.form.get("vegan"),
+            "vegetarian": request.form.get("vegetarian"),
+            "meal_img": request.form.get("meal_img"),
+            "meal_calories": request.form.get("meal_calories", type=int),
+            "created_by": session["user"]
+        }
+        mongo.db.Meals.update(meal)
+        flash("Changes saved")
+        meal_id = mongo.db.Meals.find_one({"_id": ObjectId(meal_id)}, meal)
+        return render_template("recipe.html", meal_id=meal_id)
+    oldMeal = mongo.db.tasks.find_one({"_id": ObjectId(meal_id)})
+    return render_template(
+        "edit_meal.html", oldMeal=oldMeal)
+
+
+@app.route("/delete_meal/<meal_id>")
+def delete_meal(meal_id):
+    mongo.db.Meals.remove({"_id": ObjectId(meal_id)})
+    flash("Recipe Deleted")
+    return redirect(url_for("get_meals"))
 
 
 @app.route("/recipe/<recipe_id>")

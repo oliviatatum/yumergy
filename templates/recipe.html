@@ -1,44 +1,55 @@
 {% extends 'base.html' %}
 {% block content %}
+<!--Back to browse link-->
 <div class="row">
     <a href="{{ url_for('browse_all') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to browse</p></a>
 </div>
-<div class="row">
+<!--Recipe name as heading-->
+<div class="row center-align">
     <h2 class="center-align">{{ recipe.meal_name.capitalize() }}</h2>
+    <!--Name of recipe author-->
     <p class="center-align">By {{ recipe.created_by.capitalize() }}</p>
+        <!--Checks if session user is recipe author, and if so, includes the edit and delete buttons-->
+        {% if session.user|lower == recipe.created_by|lower %}
+                <a href="{{ url_for('edit_meal', meal_id=recipe._id) }}" class="btn-small center-align cadet-blue">Edit</a>
+                <a href="{{ url_for('delete_meal', meal_id=recipe._id) }}" class="btn-small center-align cadet-blue">Delete</a>
+        {% endif %}
 </div>
+<!--Recipe image-->       
 <div class="row">
     <img src="{{ recipe.meal_img }}" alt="{{ recipe.meal_name }}" class="center">
 </div>
+<!--Recipe ingredients-->
 <div class="row">
-<div class="col m6 offset-m3">
-    <h3 class="center-align">Ingredients</h3>
+    <div class="col m6 offset-m3">
+        <h3 class="center-align">Ingredients</h3>
 
-    <ul class="browser-default">
-        {% for ingredient in recipe.meal_ingredients %}
-            <li>{{ ingredient.capitalize() }}</li>
-        {% endfor %}
-    </ul>
+        <ul class="browser-default">
+            {% for ingredient in recipe.meal_ingredients %}
+                <li>{{ ingredient.capitalize() }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
-</div>
+<!--Recipe method steps-->
 <div class="row">
-<div class="col m6 offset-m3">
-    <h3 class="center-align">Method</h3>
+    <div class="col m6 offset-m3">
+        <h3 class="center-align">Method</h3>
 
-    <ol>
-        {% for step in recipe.meal_method %}
-            <li>{{ step }}</li><br>
-        {% endfor %}
-    </ol>
+        <ol>
+            {% for step in recipe.meal_method %}
+                <li>{{ step }}</li><br>
+            {% endfor %}
+        </ol>
+    </div>
 </div>
-
-</div>
+<!--Recipe calories-->
 <div class="row">
     <div class="col m6 offset-m3 s12">
         <p class="center-align">Calories per serving: {{ recipe.meal_calories }}</p>
     </div>
 </div>
-
+<!--Back to browse link-->
 <div class="row">
     <a href="{{ url_for('browse_all') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to browse</p></a>
 </div>
