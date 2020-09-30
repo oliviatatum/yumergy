@@ -160,7 +160,7 @@ as well as discovering some new meals that he loves.
 
 <h2><b>Testing</b></h2>
 
-<a href="https://github.com/oliviatatum/yumergy/blob/b005477cf7cd6cc33f48f68e7a6ba9276095b1b3/Yumergy%20Manual%20Test.pdf">Manual testing documentation</a> 
+<a href="https://github.com/oliviatatum/yumergy/blob/master/Yumergy%20Manual%20Test.pdf">Manual testing documentation</a> 
 
 <h2><b>Deployment</b></h2>
 
@@ -182,3 +182,30 @@ Finally I would push it to my github repository.
 
 
 <h2><b>Credits</b></h2>
+
+<b>Content</b><br>
+
+Recipes that weren't written by me were sourced from the following locations:
+<ul>
+<li><a href="https://www.bbcgoodfood.com/">BBC Good Food</a></li>
+<li><a href="https://www.amazon.co.uk/BOSH-Recipes-Amazing-Fastest-Selling-Cookbook/dp/000826290X">BOSH recipe book</a></li>
+<li>Family members</li>
+</ul>
+
+All other text was written by me.
+
+<b>Media</b><br>
+
+Images were sourced from the following locations:
+<ul>
+<li><a href="https://www.bbcgoodfood.com/">BBC Good Food</a></li>
+<li><a href="https://www.amazon.co.uk/BOSH-Recipes-Amazing-Fastest-Selling-Cookbook/dp/000826290X">BOSH recipe book</a></li>
+<li><a href="https://ukcdn.ar-cdn.com/recipes/port960/a90bb4c9-c1a9-4608-bea8-c829f442864a.jpg">Cheese on toast picture</a></li>(found on google images)
+<li><a href="https://nt.global.ssl.fastly.net/images/1431861047973-1374617mushroomsoupwilliamshaw.jpg?width=1920&auto=webp&crop=16:7">Mushroom soup picture</a></li>(found on google images)
+<li><a href="https://s3.envato.com/files/271507609/2-08242.jpg">Berry granola picture</a></li>(found on google images)
+<li><a href="https://thecookful.com/wp-content/uploads/2019/09/stovetop-popcorn-1372x780.jpg">Popcorn picture</a></li>(found on google images)
+<li><a href="https://www.thehungryhutch.com/wp-content/uploads/2017/07/Hazelnut-Pesto-Sauce-Riccioli-Pasta-1.jpg">Riccioli with pesto picture</a></li>(found on google images)
+<li>My mum (for the fruit and nut bars)</li>
+<li><a href="https://pexels.com">Pexels.com</a>- For both background images used</li>
+
+</ul>
