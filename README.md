@@ -160,6 +160,8 @@ as well as discovering some new meals that he loves.
 
 <h2><b>Testing</b></h2>
 
+<a href="https://github.com/oliviatatum/yumergy/blob/b005477cf7cd6cc33f48f68e7a6ba9276095b1b3/Yumergy%20Manual%20Test.pdf">Manual testing documentation</a> 
+
 <h2><b>Deployment</b></h2>
 
 I deployed Yumergy on Heroku, which was linked to my repository on GitHub. First in my Gitpod project,

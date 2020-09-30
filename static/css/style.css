@@ -296,5 +296,8 @@ h5{
     font-size: 10px;
     text-indent: 50px;
 }
+    #loginheading, #registerheading{
+    margin: 20px;
+}
 }
 
