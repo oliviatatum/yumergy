@@ -27,7 +27,7 @@
 
     <ol>
         {% for step in recipe.meal_method %}
-            <li>{{ step }}</li>
+            <li>{{ step }}</li><br>
         {% endfor %}
     </ol>
 </div>
@@ -35,7 +35,7 @@
 </div>
 <div class="row">
     <div class="col m6 offset-m3">
-        <p>Calories per serving: {{ recipe.meal_calories }}</p>
+        <p class="center-align">Calories per serving: {{ recipe.meal_calories }}</p>
     </div>
 </div>
 
