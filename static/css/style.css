@@ -134,11 +134,7 @@ nav .nav-wrapper {
 
 /* forms */
 
-.username-caption, .password-caption{
-    color: #A9B2C3;
-    font-size: 10px;
-    text-indent: 50px;
-}
+
 
 .input-field .prefix.active{
     color: #5C95FF;
@@ -200,6 +196,10 @@ div.col.card-panel.m2{
     margin-top: 20px;
 }
 
+.username-caption, .password-caption{
+    color: #A9B2C3;
+    font-size: 9px;
+}
 /* carousel */
 .carousel-img{
     height: 100px;
@@ -247,6 +247,9 @@ h5{
 #preferences{
     margin-left: 15px;
 }
+#loginheading, #registerheading{
+    margin: 0;
+}
 }
 
 /* small screens */
@@ -288,5 +291,10 @@ h5{
     body{
         background-image: url('https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
     }
+    .username-caption, .password-caption{
+    color: #A9B2C3;
+    font-size: 10px;
+    text-indent: 50px;
+}
 }
 

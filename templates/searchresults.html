@@ -13,7 +13,7 @@
 <div class="row">
     {% for meal in meals %}
     
-        <div class="col card-panel m2">
+        <div class="col card-panel m2 s10">
             <a href="{{ url_for('recipe', recipe_id=meal._id) }}"><h5>{{ meal.meal_name }}</h5></a>
             #{{ meal.meal_time }} 
                 {% if meal.dairy_free %}

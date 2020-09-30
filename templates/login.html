@@ -4,7 +4,7 @@
 <div class="row">
     <a href="{{ url_for('get_meals') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to search</p></a>
 </div>
-    <h3 class="center-align">Log In</h3>
+    <h3 class="center-align" id="loginheading">Log In</h3>
 
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
@@ -32,7 +32,7 @@
                     </div>
                     <!--  -->
                     <div class="row">
-                        <button type="submit" class="col s4 offset-m4 btn-large bittersweet text-shadow">
+                        <button type="submit" class="col s6 offset-s3 m4 offset-m4 btn-large bittersweet text-shadow">
                             Log In <i class="fas fa-sign-in-alt"></i>
                         </button>
                     </div>
