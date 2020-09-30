@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- header -->
+
+<!--Back to search link-->
 <div class="row">
     <a href="{{ url_for('get_meals') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to search</p></a>
 </div>
+<!-- header -->
 <div class="row">
     <h2 class="center-align"> Add a Meal </h2> 
 </div>
 
     <form class="col s12" method="POST" action="{{ url_for('add_meal') }}">
+        <!--Meal Name-->
         <div class="row">
             <div class="input-field col s11 m6 offset-m3">
                 <i class="fas fa-pencil-alt prefix"></i>
@@ -17,6 +20,7 @@
                 <label for="meal_name">Meal Name</label>
             </div>
         </div>
+        <!--Meal Image-->
          <div class="row">
             <div class="input-field col s11 m6 offset-m3">
                 <i class="far fa-image prefix"></i>
@@ -24,6 +28,7 @@
                 <label for="meal_img">Image Link </label>
             </div>
         </div>
+        <!--Meal Time Dropdown Select-->
         <div class="row">
             <div class="input-field col s11 m6 offset-m3">
             <i class="fas fa-utensils prefix"></i><label>Type of meal</label>
@@ -32,82 +37,80 @@
                         <option value="lunch" name="lunch">Lunch</option>
                         <option value="dinner" name="dinner">Dinner</option>
                         <option value="snack" name="snack">Snack</option>
-                        
                     </select>
-                
             </div>
         </div>
+        <!--Checkboxes-->
         <div class="row">
-       <div class="input-field col s12 m6 offset-m3" id="add_meal_checkboxes">
-            <p class="center-align">
-                Please tick all that apply:<br>
-                <div class="row">
-                    <div class="col s6 m4">
-                        <label for="dairy_free">
-                            <input type="checkbox" class="filled-in" id="dairy_free" name="dairy_free"/>
-                                <span class="option"> Dairy-free </span>
-                        </label>
+            <div class="input-field col s12 m6 offset-m3" id="add_meal_checkboxes">
+                <p class="center-align">
+                    Please tick all that apply:<br>
+                    <div class="row">
+                        <div class="col s6 m4">
+                            <label for="dairy_free">
+                                <input type="checkbox" class="filled-in" id="dairy_free" name="dairy_free"/>
+                                    <span class="option"> Dairy-free </span>
+                            </label>
+                        </div>
+                        <div class="col s6 m4">
+                            <label for="nut_free">
+                                <input type="checkbox" class="filled-in" id="nut_free" name="nut_free"/>
+                                    <span class="option"> Nut-free </span>
+                            </label>
+                        </div>
+                        <div class="col s6 m4">
+                            <label for="gluten_free">
+                                <input type="checkbox" class="filled-in" id="gluten_free" name="gluten_free"/>
+                                    <span class="option"> Gluten-free </span>
+                            </label>
+                        </div>
+                        <div class="col s6 m4">
+                            <label for="egg_free">
+                                <input type="checkbox" class="filled-in" id="egg_free" name="egg_free"/>
+                                    <span class="option"> Egg-free </span>
+                            </label>
+                        </div>
+                        <div class="col s6 m4">
+                            <label for="vegan">
+                                <input type="checkbox" class="filled-in" id="vegan" name="vegan"/>
+                                    <span class="option"> Vegan </span>
+                            </label>
+                        </div>
+                        <div class="col s6 m4">
+                            <label for="vegetarian">
+                                <input type="checkbox" class="filled-in" id="vegetarian" name="vegetarian" />
+                                    <span class="option"> Vegetarian </span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="col s6 m4">
-                        <label for="nut_free">
-                            <input type="checkbox" class="filled-in" id="nut_free" name="nut_free"/>
-                                <span class="option"> Nut-free </span>
-                        </label>
-                    </div>
-                    <div class="col s6 m4">
-                        <label for="gluten_free">
-                            <input type="checkbox" class="filled-in" id="gluten_free" name="gluten_free"/>
-                                <span class="option"> Gluten-free </span>
-                        </label>
-                    </div>
-                    <div class="col s6 m4">
-                        <label for="egg_free">
-                            <input type="checkbox" class="filled-in" id="egg_free" name="egg_free"/>
-                                <span class="option"> Egg-free </span>
-                        </label>
-                    </div>
-                    <div class="col s6 m4">
-                        <label for="vegan">
-                            <input type="checkbox" class="filled-in" id="vegan" name="vegan"/>
-                                <span class="option"> Vegan </span>
-                        </label>
-                    </div>
-                    <div class="col s6 m4">
-                        <label for="vegetarian">
-                            <input type="checkbox" class="filled-in" id="vegetarian" name="vegetarian" />
-                                <span class="option"> Vegetarian </span>
-                        </label>
-                    </div>
-                </div>
-            </p>
+                </p>
+            </div>
         </div>
-        </div>
-
+        <!--Ingredients-->
         <div class="row">
             <div class="input-field col s11 m6 offset-m3" id="ingredient_list">
                 <i class="fas fa-list-ul prefix"></i><label for="meal_ingredients">Ingredients</label>
-                <ul id="ingredients">
-                
-                    <li>
-                        <textarea id= "meal_ingredients" name="meal_ingredients" class="materialize-textarea" placeholder="  e.g. One cup of baby leaf spinach" required></textarea>
-                    </li>
-                
-                </ul><p class="btn right" id="addField"> Add a new line + </p>
+                    <ul id="ingredients">
+                    
+                        <li>
+                            <textarea id= "meal_ingredients" name="meal_ingredients" class="materialize-textarea" placeholder="  e.g. One cup of baby leaf spinach" required></textarea>
+                        </li>
+                    
+                    </ul><p class="btn right" id="addField"> Add a new line + </p> <!--New Line button-->
             </div>
         </div>
         <div class="row">
-            
+        <!--Recipe Instructions-->
             <div class="input-field col s11 m6 offset-m3">
                 <i class="fas fa-edit prefix"></i>
                     <ol id="instructions"><label for="meal_method">Recipe Instructions</label> 
                         <li>
                             <textarea id="meal_method" name="meal_method" class="materialize-textarea" placeholder="e.g. Boil pasta in 500ml of water for 11 minutes." required></textarea>
                         </li>
-                        
-                    </ol><p class="btn right" id="addField2"> Add a new line + </p>   
+                    </ol><p class="btn right" id="addField2"> Add a new line + </p> <!--New Line button-->   
             </div>
-            
         </div>
+        <!--Calories-->
         <div class="row">
             <div class="input-field col s11 m6 offset-m3">
                 <i class="fas fa-seedling prefix"></i>
@@ -115,13 +118,14 @@
                 <label for="meal_calories">Calories per portion</label>
             </div>
         </div>
+        <!--Submit Button-->
         <div class="row">
             <button type="submit" class="col s6 offset-s3 m4 offset-m4 btn-large bittersweet text-shadow">
                 Add My Meal <i class="fas fa-magic"></i>
             </button>
         </div>
     </form>
-
+<!--Back to search link-->
 <div class="row">
     <a href="{{ url_for('get_meals') }}"><p><i class="fas fa-long-arrow-alt-left bittersweet-text"></i>Back to search</p></a>
 </div>
